@@ -11,10 +11,6 @@
   { "source": "ghcr.io/open-webui/open-webui:0.4.5", "target": "open-webui:0.4.5" },
   { "source": "ghcr.io/open-webui/open-webui:0.5.6", "target": "open-webui:0.5.6" },
 
-  { "source": "m1k1o/neko:chromium", "target": "neko-chromium:chromium" },
-  { "source": "m1k1o/neko:firefox", "target": "neko-firefox:firefox" },
-  { "source": "m1k1o/neko:tor-browser", "target": "neko-tor:tor-browser" },
-
   { "source": "mariadb:10.6.4-focal", "target": "mariadb:10.6.4-focal" },
   { "source": "mariadb:10.7-focal", "target": "mariadb:10.7-focal" },
   { "source": "mariadb:10.11.8", "target": "mariadb:10.11.8" },
@@ -62,25 +58,9 @@
 
   { "source": "memcached:1.6.23", "target": "memcached:1.6.23" },
 
-  { "source": "rabbitmq:3.12.12-management", "target": "rabbitmq:3.12.12-management" },
-
-  { "source": "elasticsearch:8.12.2", "target": "elasticsearch:8.12.2" },
-
   { "source": "prom/prometheus:v2.49.1", "target": "prometheus:v2.49.1" },
 
   { "source": "influxdb:2.7.5", "target": "influxdb:2.7.5" },
-
-  { "source": "strapi/strapi:4.17.1", "target": "strapi:4.17.1" },
-
-  { "source": "drupal:10.2.3-apache", "target": "drupal:10.2.3-apache" },
-
-  { "source": "joomla:4.4.3", "target": "joomla:4.4.3" },
-
-  { "source": "directus/directus:10.9.3", "target": "directus:10.9.3" },
-
-  { "source": "payloadcms/payload:2.7.0", "target": "payload:2.7.0" },
-
-  { "source": "prestashop/prestashop:8.1.3", "target": "prestashop:8.1.3" },
 
   { "source": "haproxy:2.8.5-alpine", "target": "haproxy:2.8.5-alpine" },
 
@@ -92,5 +72,4 @@
 
   { "source": "medusajs/medusa:1.20.10", "target": "medusajs:1.20.10" },
 
-  { "source": "odoo:17.0", "target": "odoo:17.0" }
 ]
