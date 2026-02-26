@@ -70,6 +70,6 @@
 
   { "source": "selfhostedpro/yacht:0.0.7-alpha", "target": "yacht:0.0.7-alpha" },
 
-  { "source": "medusajs/medusa:1.20.10", "target": "medusajs:1.20.10" },
+  { "source": "medusajs/medusa:1.20.10", "target": "medusajs:1.20.10" }
 
 ]
