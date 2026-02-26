@@ -1,0 +1,96 @@
+[
+  { "source": "portainer/portainer-ce:2.18.4", "target": "portainer-ce:2.18.4" },
+  { "source": "portainer/portainer-ce:2.19.4", "target": "portainer-ce:2.19.4" },
+
+  { "source": "n8nio/n8n:2.6.3", "target": "n8n:2.6.3" },
+  { "source": "n8nio/n8n:2.7.1", "target": "n8n:2.7.1" },
+
+  { "source": "ollama/ollama:0.5.4", "target": "ollama:0.5.4" },
+  { "source": "ollama/ollama:0.6.2", "target": "ollama:0.6.2" },
+
+  { "source": "ghcr.io/open-webui/open-webui:0.4.5", "target": "open-webui:0.4.5" },
+  { "source": "ghcr.io/open-webui/open-webui:0.5.6", "target": "open-webui:0.5.6" },
+
+  { "source": "m1k1o/neko:chromium", "target": "neko-chromium:chromium" },
+  { "source": "m1k1o/neko:firefox", "target": "neko-firefox:firefox" },
+  { "source": "m1k1o/neko:tor-browser", "target": "neko-tor:tor-browser" },
+
+  { "source": "mariadb:10.6.4-focal", "target": "mariadb:10.6.4-focal" },
+  { "source": "mariadb:10.7-focal", "target": "mariadb:10.7-focal" },
+  { "source": "mariadb:10.11.8", "target": "mariadb:10.11.8" },
+
+  { "source": "bitnami/wordpress:6.8.0", "target": "bitnami-wordpress:6.8.0" },
+  { "source": "bitnami/wordpress:6.4.2", "target": "bitnami-wordpress:6.4.2" },
+  { "source": "bitnami/wordpress:6.4.3", "target": "bitnami-wordpress:6.4.3" },
+
+  { "source": "ghost:5.78", "target": "ghost:5.78" },
+  { "source": "ghost:5", "target": "ghost:5" },
+  { "source": "ghost:5.78.1", "target": "ghost:5.78.1" },
+
+  { "source": "postgres:15-alpine", "target": "postgres:15-alpine" },
+  { "source": "postgres:11-alpine", "target": "postgres:11-alpine" },
+  { "source": "postgres:15.6-alpine", "target": "postgres:15.6-alpine" },
+
+  { "source": "docker.umami.is/umami-software/umami:postgresql-latest", "target": "umami:postgresql-latest" },
+  { "source": "ghcr.io/umami-software/umami:3.0.3", "target": "umami:3.0.3" },
+
+  { "source": "swaggerapi/swagger-ui:v4.15.5", "target": "swagger-ui:v4.15.5" },
+  { "source": "swaggerapi/swagger-ui:v4.18.3", "target": "swagger-ui:v4.18.3" },
+
+  { "source": "nodered/node-red:3.1", "target": "node-red:3.1" },
+  { "source": "nodered/node-red:3.1.9", "target": "node-red:3.1.9" },
+
+  { "source": "mongo-express:1.0.2", "target": "mongo-express:1.0.2" },
+
+  { "source": "bitnami/mongodb:7.0", "target": "bitnami-mongodb:7.0" },
+  { "source": "mongodb/mongodb-community-server:7.0.11-ubi8", "target": "mongodb:7.0.11-ubi8" },
+
+  { "source": "linuxserver/grav:1.7.44", "target": "grav:1.7.44" },
+
+  { "source": "ghcr.io/requarks/wiki:2", "target": "wiki:2" },
+  { "source": "ghcr.io/requarks/wiki:2.5.303", "target": "wiki:2.5.303" },
+
+  { "source": "traefik:v1.6.6-alpine", "target": "traefik:v1.6.6-alpine" },
+  { "source": "traefik:v2.11.0", "target": "traefik:2.11.0" },
+
+  { "source": "nextcloud:24.0-apache", "target": "nextcloud:24.0-apache" },
+  { "source": "nextcloud:28.0.3-apache", "target": "nextcloud:28.0.3-apache" },
+
+  { "source": "redis:7.2.4", "target": "redis:7.2.4" },
+
+  { "source": "node:20.11.1-alpine", "target": "nodejs:20.11.1-alpine" },
+
+  { "source": "memcached:1.6.23", "target": "memcached:1.6.23" },
+
+  { "source": "rabbitmq:3.12.12-management", "target": "rabbitmq:3.12.12-management" },
+
+  { "source": "elasticsearch:8.12.2", "target": "elasticsearch:8.12.2" },
+
+  { "source": "prom/prometheus:v2.49.1", "target": "prometheus:v2.49.1" },
+
+  { "source": "influxdb:2.7.5", "target": "influxdb:2.7.5" },
+
+  { "source": "strapi/strapi:4.17.1", "target": "strapi:4.17.1" },
+
+  { "source": "drupal:10.2.3-apache", "target": "drupal:10.2.3-apache" },
+
+  { "source": "joomla:4.4.3", "target": "joomla:4.4.3" },
+
+  { "source": "directus/directus:10.9.3", "target": "directus:10.9.3" },
+
+  { "source": "payloadcms/payload:2.7.0", "target": "payload:2.7.0" },
+
+  { "source": "prestashop/prestashop:8.1.3", "target": "prestashop:8.1.3" },
+
+  { "source": "haproxy:2.8.5-alpine", "target": "haproxy:2.8.5-alpine" },
+
+  { "source": "caddy:2.7.6", "target": "caddy:2.7.6" },
+
+  { "source": "louislam/dockge:1.4.2", "target": "dockge:1.4.2" },
+
+  { "source": "selfhostedpro/yacht:0.0.7-alpha", "target": "yacht:0.0.7-alpha" },
+
+  { "source": "medusajs/medusa:1.20.10", "target": "medusajs:1.20.10" },
+
+  { "source": "odoo:17.0", "target": "odoo:17.0" }
+]
