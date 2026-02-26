@@ -91,6 +91,46 @@
   { "source": "selfhostedpro/yacht:0.0.7-alpha", "target": "yacht:0.0.7-alpha" },
 
   { "source": "medusajs/medusa:1.20.10", "target": "medusajs:1.20.10" },
+  
+  { "source": "httpd:2.4.58-alpine", "target": "httpd:2.4.58-alpine" },
+  { "source": "httpd:2.4.62-alpine", "target": "httpd:2.4.62-alpine" },
 
+  { "source": "nginx:1.25.4-alpine", "target": "nginx:1.25.4-alpine" },
+  { "source": "nginx:1.26.2-alpine", "target": "nginx:1.26.2-alpine" },
+
+  { "source": "haproxy:2.9.7-alpine", "target": "haproxy:2.9.7-alpine" },
+  { "source": "haproxy:3.0.3-alpine", "target": "haproxy:3.0.3-alpine" },
+
+  { "source": "quay.io/keycloak/keycloak:25.0.2", "target": "keycloak:25.0.2" },
+  { "source": "ghcr.io/goauthentik/server:2024.6.3", "target": "authentik:2024.6.3" },
+  { "source": "authelia/authelia:4.38.10", "target": "authelia:4.38.10" },
+  { "source": "vaultwarden/server:1.31.0", "target": "vaultwarden:1.31.0" },
+
+   { "source": "grafana/grafana:11.1.3", "target": "grafana:11.1.3" },
+  { "source": "grafana/loki:3.1.1", "target": "loki:3.1.1" },
+  { "source": "grafana/promtail:3.1.1", "target": "promtail:3.1.1" },
+  { "source": "grafana/tempo:2.5.0", "target": "tempo:2.5.0" },
+  { "source": "prom/alertmanager:v0.27.0", "target": "alertmanager:v0.27.0" },
+  { "source": "prom/node-exporter:v1.8.2", "target": "node-exporter:v1.8.2" },
+  { "source": "gcr.io/cadvisor/cadvisor:v0.49.1", "target": "cadvisor:v0.49.1" },
+
+  { "source": "qdrant/qdrant:v1.10.1", "target": "qdrant:v1.10.1" },
+  { "source": "chromadb/chroma:0.5.5", "target": "chroma:0.5.5" },
+  { "source": "semitechnologies/weaviate:1.26.1", "target": "weaviate:1.26.1" },
+
+  { "source": "bitnami/kafka:3.7.1", "target": "bitnami-kafka:3.7.1" },
+  { "source": "bitnami/zookeeper:3.9.2", "target": "bitnami-zookeeper:3.9.2" },
+  { "source": "provectuslabs/kafka-ui:v0.7.2", "target": "kafka-ui:v0.7.2" },
+  
+  { "source": "jenkins/jenkins:2.462-lts-jdk21", "target": "jenkins:2.462-lts-jdk21" },
+  { "source": "gitea/gitea:1.22.1", "target": "gitea:1.22.1" },
+  { "source": "sonarqube:10.6-community", "target": "sonarqube:10.6-community" },
+  { "source": "hashicorp/vault:1.17.2", "target": "vault:1.17.2" },
+
+   { "source": "mattermost/mattermost-team-edition:9.10.1", "target": "mattermost:9.10.1" },
+  { "source": "rocketchat/rocket.chat:6.10.1", "target": "rocketchat:6.10.1" },
+  { "source": "lscr.io/linuxserver/hedgedoc:1.9.9", "target": "hedgedoc:1.9.9" },
+  { "source": "solidnerd/bookstack:24.5.20240522", "target": "bookstack:24.5" },
+  
   { "source": "odoo:17.0", "target": "odoo:17.0" }
 ]
