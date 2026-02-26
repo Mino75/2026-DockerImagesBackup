@@ -1,0 +1,104 @@
+# .github/workflows/mirror-images.yml
+name: Mirror container images to Docker Hub (6 months + manual)
+
+on:
+  workflow_dispatch:
+  # Every 6 months: Jan 1st and Jul 1st at 03:15 UTC
+  schedule:
+    - cron: "15 3 1 1,7 *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-images
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tools (skopeo + jq)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y skopeo jq
+
+      - name: Login to Docker Hub (for skopeo)
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "${DOCKERHUB_USERNAME}" && test -n "${DOCKERHUB_TOKEN}"
+
+          mkdir -p "${HOME}/.docker"
+          AUTH="$(printf '%s:%s' "${DOCKERHUB_USERNAME}" "${DOCKERHUB_TOKEN}" | base64 -w 0)"
+
+          cat > "${HOME}/.docker/config.json" <<EOF
+          { "auths": { "https://index.docker.io/v1/": { "auth": "${AUTH}" } } }
+          EOF
+
+      - name: Prepare digest cache
+        run: |
+          set -euo pipefail
+          test -f images.json
+          mkdir -p .cache
+          test -f .cache/digests.json || echo "{}" > .cache/digests.json
+
+      - name: Mirror only if source changed
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        run: |
+          set -euo pipefail
+          test -n "${DOCKERHUB_USERNAME}"
+
+          CACHE_FILE=".cache/digests.json"
+          UPDATED=0
+
+          while IFS= read -r item; do
+            SRC="$(echo "${item}" | jq -r '.source')"
+            TGT="$(echo "${item}" | jq -r '.target')"   # format: repo:tag (without username)
+            test -n "${SRC}" && test -n "${TGT}"
+
+            # Stable fingerprint of the raw manifest (detects changes without doing unnecessary copies)
+            SRC_FP="$(skopeo inspect --raw "docker://${SRC}" | sha256sum | awk '{print $1}')"
+            KEY="$(printf '%s|%s' "${SRC}" "${TGT}")"
+            PREV="$(jq -r --arg k "${KEY}" '.[$k] // empty' "${CACHE_FILE}")"
+
+            echo "----"
+            echo "Image: ${SRC} -> docker.io/${DOCKERHUB_USERNAME}/${TGT}"
+            echo "Prev:  ${PREV:-<none>}"
+            echo "Now:   ${SRC_FP}"
+
+            if [ "${SRC_FP}" = "${PREV}" ]; then
+              echo "Skip (no change)"
+              continue
+            fi
+
+            echo "Copy (changed)"
+            skopeo copy --all --retry-times 2 \
+              "docker://${SRC}" \
+              "docker://docker.io/${DOCKERHUB_USERNAME}/${TGT}"
+
+            tmp="$(mktemp)"
+            jq --arg k "${KEY}" --arg v "${SRC_FP}" '.[$k]=$v' "${CACHE_FILE}" > "${tmp}"
+            mv "${tmp}" "${CACHE_FILE}"
+            UPDATED=1
+          done < <(jq -c '.[]' images.json)
+
+          echo "UPDATED=${UPDATED}" >> "${GITHUB_ENV}"
+
+      - name: Commit digest cache (only if changed)
+        if: env.UPDATED == '1'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .cache/digests.json
+          git commit -m "chore: update mirror digest cache" || exit 0
+          git push
