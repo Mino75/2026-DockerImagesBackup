@@ -80,6 +80,34 @@ These were mirrored at some point and may still exist on Docker Hub, but are no 
 | `payload` | [payloadcms/payload](https://github.com/payloadcms/payload) | [MIT](https://github.com/payloadcms/payload/blob/main/LICENSE) |
 | `prestashop` | [PrestaShop/PrestaShop](https://github.com/PrestaShop/PrestaShop) | [OSL 3.0](https://github.com/PrestaShop/PrestaShop/blob/develop/LICENSE.md) |
 | `odoo` | [odoo/odoo](https://github.com/odoo/odoo) | [LGPL v3](https://github.com/odoo/odoo/blob/17.0/LICENSE) |
+| `httpd` (Apache HTTP) | [apache/httpd](https://github.com/apache/httpd) | [Apache 2.0](https://github.com/apache/httpd/blob/trunk/LICENSE) |
+| `nginx` | [nginx/nginx](https://github.com/nginx/nginx) | [BSD 2-Clause](https://github.com/nginx/nginx/blob/master/LICENSE) |
+| `haproxy` (2.9 / 3.0) | [haproxy/haproxy](https://github.com/haproxy/haproxy) | [GPL v2 / LGPL v2.1](https://github.com/haproxy/haproxy/blob/master/LICENSE) |
+| `keycloak` | [keycloak/keycloak](https://github.com/keycloak/keycloak) | [Apache 2.0](https://github.com/keycloak/keycloak/blob/main/LICENSE.txt) |
+| `authentik` | [goauthentik/authentik](https://github.com/goauthentik/authentik) | [MIT](https://github.com/goauthentik/authentik/blob/main/LICENSE) |
+| `authelia` | [authelia/authelia](https://github.com/authelia/authelia) | [Apache 2.0](https://github.com/authelia/authelia/blob/master/LICENSE) |
+| `vaultwarden` | [dani-garcia/vaultwarden](https://github.com/dani-garcia/vaultwarden) | [AGPL v3](https://github.com/dani-garcia/vaultwarden/blob/main/LICENSE.txt) |
+| `grafana` | [grafana/grafana](https://github.com/grafana/grafana) | [AGPL v3](https://github.com/grafana/grafana/blob/main/LICENSE) |
+| `loki` | [grafana/loki](https://github.com/grafana/loki) | [AGPL v3](https://github.com/grafana/loki/blob/main/LICENSE) |
+| `promtail` | [grafana/loki](https://github.com/grafana/loki) | [AGPL v3](https://github.com/grafana/loki/blob/main/LICENSE) |
+| `tempo` | [grafana/tempo](https://github.com/grafana/tempo) | [AGPL v3](https://github.com/grafana/tempo/blob/main/LICENSE) |
+| `alertmanager` | [prometheus/alertmanager](https://github.com/prometheus/alertmanager) | [Apache 2.0](https://github.com/prometheus/alertmanager/blob/main/LICENSE) |
+| `node-exporter` | [prometheus/node_exporter](https://github.com/prometheus/node_exporter) | [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE) |
+| `cadvisor` | [google/cadvisor](https://github.com/google/cadvisor) | [Apache 2.0](https://github.com/google/cadvisor/blob/master/LICENSE) |
+| `qdrant` | [qdrant/qdrant](https://github.com/qdrant/qdrant) | [Apache 2.0](https://github.com/qdrant/qdrant/blob/master/LICENSE) |
+| `chroma` | [chroma-core/chroma](https://github.com/chroma-core/chroma) | [Apache 2.0](https://github.com/chroma-core/chroma/blob/main/LICENSE) |
+| `weaviate` | [weaviate/weaviate](https://github.com/weaviate/weaviate) | [BSD 3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE) |
+| `bitnami-kafka` | [bitnami/containers](https://github.com/bitnami/containers) | Apache 2.0 / Kafka: [Apache 2.0](https://github.com/apache/kafka/blob/trunk/LICENSE) |
+| `bitnami-zookeeper` | [bitnami/containers](https://github.com/bitnami/containers) | Apache 2.0 / ZooKeeper: [Apache 2.0](https://github.com/apache/zookeeper/blob/master/LICENSE.txt) |
+| `kafka-ui` | [provectus/kafka-ui](https://github.com/provectus/kafka-ui) | [Apache 2.0](https://github.com/provectus/kafka-ui/blob/master/LICENSE) |
+| `jenkins` | [jenkinsci/jenkins](https://github.com/jenkinsci/jenkins) | [MIT](https://github.com/jenkinsci/jenkins/blob/master/LICENSE.txt) |
+| `gitea` | [go-gitea/gitea](https://github.com/go-gitea/gitea) | [MIT](https://github.com/go-gitea/gitea/blob/main/LICENSE) |
+| `sonarqube` | [SonarSource/sonarqube](https://github.com/SonarSource/sonarqube) | [LGPL v3 (community)](https://github.com/SonarSource/sonarqube/blob/master/LICENSE.txt) |
+| `vault` | [hashicorp/vault](https://github.com/hashicorp/vault) | [BSL 1.1](https://github.com/hashicorp/vault/blob/main/LICENSE) ⚠️ |
+| `mattermost` | [mattermost/mattermost](https://github.com/mattermost/mattermost) | [MIT / Commercial](https://github.com/mattermost/mattermost/blob/master/LICENSE.txt) |
+| `rocketchat` | [RocketChat/Rocket.Chat](https://github.com/RocketChat/Rocket.Chat) | [MIT](https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE) |
+| `hedgedoc` | [hedgedoc/hedgedoc](https://github.com/hedgedoc/hedgedoc) | [AGPL v3](https://github.com/hedgedoc/hedgedoc/blob/develop/LICENSE) |
+| `bookstack` | [BookStackApp/BookStack](https://github.com/BookStackApp/BookStack) | [MIT](https://github.com/BookStackApp/BookStack/blob/development/LICENSE) |
 
 ---
 
