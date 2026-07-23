@@ -2,7 +2,7 @@
 
 A GitHub Action that periodically mirrors third-party Docker/OCI images to Docker Hub — purely as a **backup**. Nothing is modified, repackaged, or redistributed for commercial gain. All original licenses apply in full.
 
-> ⚠️ **Heads up:** This repo is a personal/infra backup tool. If you own one of the mirrored images and want it removed, just [open an issue](../../issues) or send a PR — it'll be done promptly, no questions asked.
+> ⚠️ **Heads up:** This repo is a personal/infra backup tool. 
 
 ---
 
@@ -23,7 +23,6 @@ A GitHub Action that periodically mirrors third-party Docker/OCI images to Docke
 - 🛠️ Images are **not altered** in any way.
 - 🏷️ All original **licenses remain in effect** — see the table below.
 - 💰 These images are **not commercialized** here. Do not use this mirror to bypass upstream licensing terms.
-- 📬 If you are a maintainer and want your image removed, [open an issue](../../issues).
 
 ---
 
